@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
+import { Link } from "react-router-dom";
 
 const SytledSidebar = styled.aside`
   background-color: var(--color-grey-0);
@@ -15,7 +16,9 @@ const SytledSidebar = styled.aside`
 function Sidebar() {
   return (
     <SytledSidebar>
-      <Logo />
+      <Link to="/">
+        <Logo />
+      </Link>
       <MainNav />
     </SytledSidebar>
   );
