@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import MainNav from "./MainNav";
 import { Link } from "react-router-dom";
+import Uploader from "../data/Uploader";
 
 const SytledSidebar = styled.aside`
   background-color: var(--color-grey-0);
@@ -20,6 +21,7 @@ function Sidebar() {
         <Logo />
       </Link>
       <MainNav />
+      <Uploader />
     </SytledSidebar>
   );
 }
