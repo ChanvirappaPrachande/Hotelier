@@ -1,10 +1,15 @@
 import styled from "styled-components";
+import Heading from "./Heading";
+import GlobalStyles from "../styles/GlobalStyles";
+import Button from "./Button";
 
 const StyledErrorFallback = styled.main`
   height: 100vh;
   background-color: var(--color-grey-50);
   display: flex;
   align-items: center;
+  flex-direction: column;
+  gap: 2rem;
   justify-content: center;
   padding: 4.8rem;
 `;
@@ -16,7 +21,7 @@ const Box = styled.div`
   border-radius: var(--border-radius-md);
 
   padding: 4.8rem;
-  flex: 0 1 96rem;
+  flex: 0 1 9rem;
   text-align: center;
 
   & h1 {
@@ -29,3 +34,21 @@ const Box = styled.div`
     color: var(--color-grey-500);
   }
 `;
+function ErrorFallback({ error, resetErrorBoundary }) {
+  return (
+    <>
+      <GlobalStyles />
+      <StyledErrorFallback>
+        <Box>
+          <Heading as="h1">Something went wrong</Heading>
+          <p>{error.message}</p>
+        </Box>
+        <Button size="large" onClick={resetErrorBoundary}>
+          Try again
+        </Button>
+      </StyledErrorFallback>
+    </>
+  );
+}
+
+export default ErrorFallback;
