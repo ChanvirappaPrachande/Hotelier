@@ -1,4 +1,4 @@
-# Hotel Management App
+# Hotel Management App (code along project)
 [**Visit the Live App**](https://hotelier-topaz.vercel.app/)  <!-- Replace "#" with the actual link to your deployed app -->
 - **Username**: chanvir@gmail.com
 - **Password**: 12345678
